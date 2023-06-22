@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer overview data mart, offering key details for each unique customer. One row per customer.
+    config:
+      meta: {TableauCertified: true}
+    columns:
+      - name: customer_id
+        description: The unique key of the orders mart.
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: Customers' first name.
+      - name: last_name
+        description: Customers' last name.
+      - name: first_order_date
+        description: The timestamp when a customer placed their first order.
+      - name: most_recent_order_date
+        description: The timestamp of a customer's most recent order.
+      - name: number_of_orders
+        description: The sum of all the pre-tax subtotals of every order a customer has placed.
+      - name: lifetime_value
+        description: The sum of all the order totals (including tax) that a customer has ever placed.
+      - name: lifetime_10
+        description: Options are 'new' or 'returning', indicating if a customer has ordered more than once or has only placed their first order to date.
