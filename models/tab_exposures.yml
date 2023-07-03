@@ -1,0 +1,12 @@
+exposures:
+- depends_on:
+  - ref('dim_customers')
+  description: ''
+  maturity: medium
+  name: dbt_prod
+  owner:
+    email: sebastian.wiesner@nimbusintelligence.com
+    name: Sebastian Wiesner
+  type: dashboard
+  url: https://eu-west-1a.online.tableau.com//#/site/nimbus/workbooks/934040
+version: 2
