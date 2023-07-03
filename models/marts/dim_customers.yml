@@ -3,8 +3,6 @@ version: 2
 models:
   - name: dim_customers
     description: Customer overview data mart, offering key details for each unique customer. One row per customer.
-    config:
-      meta: {TableauCertified: true}
     columns:
       - name: customer_id
         description: The unique key of the orders mart.
